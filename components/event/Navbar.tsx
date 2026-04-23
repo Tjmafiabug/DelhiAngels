@@ -6,12 +6,6 @@ import Link from "next/link";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -47,8 +41,8 @@ export default function Navbar() {
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
 
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 flex-shrink-0">
+          {/* Logo + brand name — always visible */}
+          <Link href="/" className="flex items-center gap-3 flex-shrink-0 min-w-0">
             <div className="border border-white/20 rounded-md p-1 flex-shrink-0">
               <Image
                 src="/delhi-angels-logo.jpeg"
@@ -58,11 +52,11 @@ export default function Navbar() {
                 className="rounded object-contain"
               />
             </div>
-            <div className="hidden sm:block leading-tight font-heading">
-              <span className="text-white font-bold text-sm uppercase tracking-[-0.01em] block">
+            <div className="leading-tight font-heading min-w-0">
+              <span className="text-white font-bold text-[11px] sm:text-sm uppercase tracking-[-0.01em] block truncate">
                 D2C Mafia by Delhi Angels
               </span>
-              <span className="text-white/50 text-[10px] uppercase tracking-[0.15em] font-medium">
+              <span className="text-white/50 text-[9px] sm:text-[10px] uppercase tracking-[0.15em] font-medium hidden xs:block">
                 D2C Summit · Noida · May 24, 2026
               </span>
             </div>
@@ -104,7 +98,7 @@ export default function Navbar() {
                 type="button"
                 variant="ghost"
                 size="icon"
-                className="lg:hidden"
+                className="lg:hidden flex-shrink-0"
                 aria-label={isOpen ? "Close menu" : "Open menu"}
                 aria-expanded={isOpen}
               >
@@ -134,30 +128,21 @@ export default function Navbar() {
                 </div>
               </div>
 
-              {/* Nav links */}
+              {/* Nav links — direct list, no accordion */}
               <div className="flex-1 overflow-y-auto px-6 py-4">
-                <Accordion type="single" collapsible className="w-full">
-                  <AccordionItem value="nav">
-                    <AccordionTrigger className="text-[13px] uppercase tracking-[0.12em]">
-                      Navigate
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <ul className="flex flex-col gap-1 pt-1">
-                        {navLinks.map((link) => (
-                          <li key={link.label}>
-                            <a
-                              href={link.href}
-                              onClick={(e) => { e.preventDefault(); handleAnchor(link.href); }}
-                              className="block py-3 px-3 text-[13px] font-semibold uppercase tracking-[0.12em] text-white/60 hover:text-white hover:bg-white/5 rounded-md transition-colors"
-                            >
-                              {link.label}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
+                <ul className="flex flex-col">
+                  {navLinks.map((link) => (
+                    <li key={link.label}>
+                      <a
+                        href={link.href}
+                        onClick={(e) => { e.preventDefault(); handleAnchor(link.href); }}
+                        className="flex items-center py-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-white/70 hover:text-white border-b border-white/[0.06] transition-colors duration-150"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               {/* Sheet footer CTAs */}

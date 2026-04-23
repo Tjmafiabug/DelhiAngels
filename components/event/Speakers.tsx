@@ -69,12 +69,12 @@ const speakers: Speaker[] = [
 
 const PLACEHOLDER_COUNT = 6;
 
-function SpeakerCard({ speaker, delay }: { speaker?: Speaker; delay: number }) {
+function SpeakerCard({ speaker, delay, inView }: { speaker?: Speaker; delay: number; inView: boolean }) {
   const isTBA = !speaker;
 
   return (
     <div
-      className="reveal group relative overflow-hidden aspect-[3/4] bg-[#1a1a1a] cursor-default"
+      className={`reveal group relative overflow-hidden aspect-[3/4] bg-[#1a1a1a] cursor-default ${inView ? "in-view" : ""}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       {/* Photo or charcoal placeholder */}
@@ -164,13 +164,14 @@ export default function Speakers() {
         {/* Full-bleed portrait grid */}
         <div
           ref={gridRef}
-          className={`grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 ${gridInView ? "[&_.reveal]:in-view" : ""}`}
+          className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4"
         >
           {items.map((speaker, i) => (
             <SpeakerCard
               key={(speaker as Speaker | undefined)?.name ?? i}
               speaker={speaker as Speaker | undefined}
               delay={i * 60}
+              inView={gridInView}
             />
           ))}
         </div>
