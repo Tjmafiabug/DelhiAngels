@@ -27,7 +27,7 @@ export default function RegisterPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label className="block text-xs text-gray-500 uppercase tracking-wider mb-1.5">Full Name *</label>
               <input name="name" required placeholder="Your name"
@@ -40,7 +40,7 @@ export default function RegisterPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label className="block text-xs text-gray-500 uppercase tracking-wider mb-1.5">Company *</label>
               <input name="company" required placeholder="Your startup / firm"
@@ -56,7 +56,7 @@ export default function RegisterPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label className="block text-xs text-gray-500 uppercase tracking-wider mb-1.5">Phone</label>
               <input name="phone" type="tel" placeholder="+91 98765 43210"

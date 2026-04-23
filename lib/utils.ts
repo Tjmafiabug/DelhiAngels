@@ -1,4 +1,10 @@
+import { clsx, type ClassValue } from 'clsx'
+import { twMerge } from 'tailwind-merge'
 import type { Attendee, AttendeeRole, LookingFor } from './types'
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
 
 export function getInitials(name: string): string {
   const parts = name.trim().split(/\s+/)
