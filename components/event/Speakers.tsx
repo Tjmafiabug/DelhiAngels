@@ -11,16 +11,15 @@ type Speaker = {
 };
 
 const speakers: Speaker[] = [
-  { name: "Ritesh Malik", title: "", company: "", photo: "/speakers/ritesh-malik.webp" },
-  { name: "Kunwer Sachdev", title: "", company: "", photo: "/speakers/kunwer-sachdev.webp" },
-  { name: "Madhukar Bhardwaj", title: "", company: "", photo: "/speakers/madhukar-bhardwaj.jpeg" },
-  { name: "Faizan Ayubi", title: "", company: "", photo: "/speakers/faizan-ayubi.jpeg" },
-  { name: "Shweta Singla", title: "", company: "", photo: "/speakers/shweta-singla.jpeg" },
-  { name: "Prof. Dhruv Nath", title: "", company: "", photo: "/speakers/dhruv-nath.jpeg" },
-  { name: "Aditya Arora", title: "", company: "", photo: "/speakers/aditya-arora.jpeg" },
-  { name: "Vineet Sagar", title: "", company: "", photo: "/speakers/vineet-sagar.png" },
-  { name: "Om Sovan Das", title: "", company: "", photo: "/speakers/om-sovan-das.jpeg" },
-  { name: "Sanyam Dhingra", title: "", company: "", photo: "/speakers/sanyam-dhingra.jpeg" },
+  { name: "Kunwer Sachdev", title: "Founder", company: "Su-Kam · Su-vastika", photo: "/speakers/kunwer-sachdev.webp" },
+  { name: "Madhukar Bhardwaj", title: "Startup Investor", company: "Yashaa Global Capital · IIM Bangalore", photo: "/speakers/madhukar-bhardwaj.jpeg" },
+  { name: "Faizan Ayubi", title: "Co-founder & CEO", company: "Trackier", photo: "/speakers/faizan-ayubi.jpeg" },
+  { name: "Shweta Singla", title: "Founding Partner", company: "WEIN Capital", photo: "/speakers/shweta-singla.jpeg" },
+  { name: "Prof. Dhruv Nath", title: "Professor & Author", company: "MDI Gurgaon", photo: "/speakers/dhruv-nath.jpeg" },
+  { name: "Vineet Sagar", title: "Co-founder & Managing Partner", company: "Venture Garage", photo: "/speakers/vineet-sagar.png" },
+  { name: "Om Sovan Das", title: "VP", company: "MU Ventures · Masters Union", photo: "/speakers/om-sovan-das.jpeg" },
+  { name: "Sanyam Dhingra", title: "AVP", company: "Amity Innovation Incubator", photo: "/speakers/sanyam-dhingra.jpeg" },
+  { name: "Anvit Baliga", title: "Principal", company: "Venture Catalysts++", photo: "/speakers/anvit-baliga.jpeg" },
 ];
 
 
