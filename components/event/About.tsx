@@ -2,6 +2,7 @@
 
 import { useReveal } from "@/hooks/useReveal";
 import { useCounter } from "@/hooks/useCounter";
+import HighlightsSlideshow from "@/components/event/HighlightsSlideshow";
 
 const stats = [
   { value: 200, suffix: "+", label: "Attendees",      color: "text-[#f97316]", line: "bg-[#f97316]" },
@@ -73,9 +74,9 @@ export default function About() {
               ))}
             </div>
 
-            {/* Highlights placeholder */}
-            <div className={`reveal reveal-delay-3 ${statsInView ? "in-view" : ""} relative w-full aspect-video bg-[#111] flex items-center justify-center rounded-sm border border-white/5`}>
-              <p className="text-[#333] text-xs uppercase tracking-[0.25em]">Event highlights coming soon</p>
+            {/* Highlights slideshow */}
+            <div className={`reveal reveal-delay-3 ${statsInView ? "in-view" : ""}`}>
+              <HighlightsSlideshow />
             </div>
           </div>
 
