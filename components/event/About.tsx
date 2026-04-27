@@ -73,15 +73,9 @@ export default function About() {
               ))}
             </div>
 
-            {/* Highlights video */}
-            <div className={`reveal reveal-delay-3 ${statsInView ? "in-view" : ""} relative w-full aspect-video`}>
-              <iframe
-                src="https://www.youtube.com/embed/wsHsVrWMZ1o?si=g7u7LbRjmuiNN9RE"
-                title="Event Highlights"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
-              />
+            {/* Highlights placeholder */}
+            <div className={`reveal reveal-delay-3 ${statsInView ? "in-view" : ""} relative w-full aspect-video bg-[#111] flex items-center justify-center rounded-sm border border-white/5`}>
+              <p className="text-[#333] text-xs uppercase tracking-[0.25em]">Event highlights coming soon</p>
             </div>
           </div>
 

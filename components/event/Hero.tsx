@@ -1,21 +1,13 @@
 import Link from 'next/link'
-import CountdownTimer from './CountdownTimer'
+import BrandMontage from './BrandMontage'
+import BrandNameWall from './BrandNameWall'
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 pb-16 overflow-hidden bg-black">
 
-      {/* Background video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-30"
-        aria-hidden="true"
-      >
-        <source src="/video/highlights.mp4" type="video/mp4" />
-      </video>
+      {/* Brand name wall */}
+      <BrandNameWall />
 
       {/* Radial glow */}
       <div
@@ -61,12 +53,12 @@ export default function Hero() {
         </h1>
 
         {/* Tagline */}
-        <p className="hero-enter hero-d3 text-[#a1a1aa] text-[11px] sm:text-xs uppercase tracking-[0.2em] max-w-md mx-auto mb-12 leading-loose">
+        <p className="hero-enter hero-d3 text-[#a1a1aa] text-[11px] sm:text-xs uppercase tracking-[0.2em] max-w-md mx-auto mb-8 leading-loose">
           Where India&apos;s top D2C founders meet capital
         </p>
 
         {/* CTAs */}
-        <div className="hero-enter hero-d4 flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
+        <div className="hero-enter hero-d4 flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
           <Link
             href="/register"
             className="glow-pulse inline-flex items-center justify-center gap-2 bg-[#f97316] hover:bg-[#ea580c] active:scale-[0.97] text-white font-bold uppercase tracking-[0.12em] text-[11px] px-8 py-4 rounded-lg transition-all duration-200 w-full sm:w-auto"
@@ -91,12 +83,9 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Countdown */}
-        <div className="hero-enter hero-d5 flex flex-col items-center gap-4">
-          <p className="text-[#a1a1aa] text-[10px] uppercase tracking-[0.2em]">
-            Event starts in
-          </p>
-          <CountdownTimer />
+        {/* Brand montage */}
+        <div className="hero-enter hero-d5 w-full max-w-2xl mx-auto">
+          <BrandMontage />
         </div>
       </div>
 
