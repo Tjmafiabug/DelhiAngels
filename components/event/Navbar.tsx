@@ -9,7 +9,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navLinks = [
   { label: "About", href: "#about" },
-  { label: "Speakers", href: "#speakers" },
+  { label: "Investors", href: "#speakers" },
   { label: "Agenda", href: "#agenda" },
   { label: "Partners", href: "#partners" },
 ];
@@ -57,7 +57,7 @@ export default function Navbar() {
                 D2C Mafia by Delhi Angels
               </span>
               <span className="text-white/50 text-[9px] sm:text-[10px] uppercase tracking-[0.15em] font-medium hidden xs:block">
-                D2C Summit · Noida · May 24, 2026
+                D2C Summit · Gurugram · Coming Soon
               </span>
             </div>
           </Link>
@@ -123,7 +123,7 @@ export default function Navbar() {
                     D2C Mafia by Delhi Angels
                   </span>
                   <span className="text-white/50 text-[10px] uppercase tracking-[0.12em] font-medium">
-                    May 24, 2026 · Noida
+                    Coming Soon · Gurugram
                   </span>
                 </div>
               </div>

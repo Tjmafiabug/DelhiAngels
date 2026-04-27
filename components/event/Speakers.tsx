@@ -11,61 +11,18 @@ type Speaker = {
 };
 
 const speakers: Speaker[] = [
-  {
-    name: "Timothy Draper",
-    title: "Founder",
-    company: "Draper Associates",
-    photo: "/speakers/tim-draper.png",
-  },
-  {
-    name: "Fadi Ghandour",
-    title: "Executive Chairman",
-    company: "Wamda Capital",
-    photo: "/speakers/fadi-ghandour.jpeg",
-  },
-  {
-    name: "Noor Sweid",
-    title: "Founder & Managing Partner",
-    company: "Global Ventures",
-    photo: "/speakers/noor-sweid.png",
-  },
-  {
-    name: "Alain Bejjani",
-    title: "Business Leader & Investor",
-    company: "Independent",
-    photo: "/speakers/alain-bejjani.jpeg",
-  },
-  {
-    name: "Rania Masri",
-    title: "CEO",
-    company: "The Giving Movement",
-    photo: "/speakers/rania-masri.png",
-  },
-  {
-    name: "Armineh Baghoomian",
-    title: "Managing Director",
-    company: "Partners for Growth",
-    photo: "/speakers/armineh-baghoomian.jpg",
-  },
-  {
-    name: "Mahmoud Ward",
-    title: "Director of Investment",
-    company: "Dubai Future District Fund",
-    photo: "/speakers/mahmoud-ward.jpg",
-  },
-  {
-    name: "Prashant K. (PK) Gulati",
-    title: "Founder",
-    company: "The Smart Start Fund · TiE Dubai",
-    photo: "/speakers/pk-gulati.png",
-  },
-  {
-    name: "HE. Mothanna Gharaibeh",
-    title: "CEO",
-    company: "The Fifth",
-    photo: "/speakers/mothanna-gharaibeh.jpg",
-  },
+  { name: "Ritesh Malik", title: "", company: "", photo: "/speakers/ritesh-malik.webp" },
+  { name: "Kunwer Sachdev", title: "", company: "", photo: "/speakers/kunwer-sachdev.webp" },
+  { name: "Madhukar Bhardwaj", title: "", company: "", photo: "/speakers/madhukar-bhardwaj.jpeg" },
+  { name: "Faizan Ayubi", title: "", company: "", photo: "/speakers/faizan-ayubi.jpeg" },
+  { name: "Shweta Singla", title: "", company: "", photo: "/speakers/shweta-singla.jpeg" },
+  { name: "Prof. Dhruv Nath", title: "", company: "", photo: "/speakers/dhruv-nath.jpeg" },
+  { name: "Aditya Arora", title: "", company: "", photo: "/speakers/aditya-arora.jpeg" },
+  { name: "Vineet Sagar", title: "", company: "", photo: "/speakers/vineet-sagar.png" },
+  { name: "Om Sovan Das", title: "", company: "", photo: "/speakers/om-sovan-das.jpeg" },
+  { name: "Sanyam Dhingra", title: "", company: "", photo: "/speakers/sanyam-dhingra.jpeg" },
 ];
+
 
 const PLACEHOLDER_COUNT = 6;
 
@@ -110,11 +67,14 @@ function SpeakerCard({ speaker, delay, inView }: { speaker?: Speaker; delay: num
         >
           {speaker?.name ?? "Speaker"}
         </p>
-        <p className="text-[#a1a1aa] text-xs mt-0.5 leading-tight">
-          {speaker
-            ? `${speaker.title} · ${speaker.company}`
-            : "Announcement coming soon"}
-        </p>
+        {(speaker?.title || speaker?.company) && (
+          <p className="text-[#a1a1aa] text-xs mt-0.5 leading-tight">
+            {[speaker.title, speaker.company].filter(Boolean).join(" · ")}
+          </p>
+        )}
+        {!speaker && (
+          <p className="text-[#a1a1aa] text-xs mt-0.5 leading-tight">Announcement coming soon</p>
+        )}
       </div>
 
       {/* Hover overlay — orange accent border + glow */}
@@ -144,19 +104,19 @@ export default function Speakers() {
         {/* Section header */}
         <div ref={headerRef} className={`reveal mb-12 ${headerInView ? "in-view" : ""}`}>
           <span className="inline-block text-[#f97316] text-[11px] font-semibold uppercase tracking-[0.2em] mb-5">
-            Speakers
+            Expected Visiting Investors
           </span>
           <h2
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-white leading-[1.05]"
             style={{ fontFamily: "var(--font-space-grotesk)" }}
           >
-            Hear From
+            Capital From
             <br />
             <span className="text-[#f97316]">The Best</span>
           </h2>
           {speakers.length === 0 && (
             <p className="text-[#a1a1aa] text-[11px] font-semibold uppercase tracking-[0.18em] mt-4">
-              Speaker announcements coming soon
+              Investor announcements coming soon
             </p>
           )}
         </div>

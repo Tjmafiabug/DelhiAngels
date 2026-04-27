@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const quickLinks = [
   { label: "About", href: "#about" },
-  { label: "Speakers", href: "#speakers" },
+  { label: "Investors", href: "#speakers" },
   { label: "Agenda", href: "#agenda" },
   { label: "Partners", href: "#partners" },
 ];
@@ -74,7 +74,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-[#a1a1aa] text-sm leading-relaxed max-w-xs mb-6">
-              D2C Summit · Noida Chapter. May 24, 2026. Where India&apos;s top
+              D2C Summit · Gurugram Chapter. Coming Soon. Where India&apos;s top
               D2C founders meet capital.
             </p>
 
@@ -167,7 +167,7 @@ export default function Footer() {
             © 2026 Delhi Angels. All rights reserved.
           </p>
           <p className="text-[#a1a1aa]/50 text-xs uppercase tracking-[0.15em]">
-            D2C Mafia × Delhi Angels · Noida, India
+            D2C Mafia × Delhi Angels · Gurugram, India
           </p>
         </div>
 

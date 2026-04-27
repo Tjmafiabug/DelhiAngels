@@ -45,7 +45,7 @@ export default function Hero() {
           className="hero-enter hero-d0 text-[#f97316] text-[11px] font-semibold uppercase tracking-[0.25em] mb-8"
           style={{ fontFamily: 'var(--font-space-grotesk)' }}
         >
-          May 24, 2026 &nbsp;·&nbsp; Noida, India
+          Coming Soon &nbsp;·&nbsp; Gurugram, India
         </p>
 
         {/* H1 */}

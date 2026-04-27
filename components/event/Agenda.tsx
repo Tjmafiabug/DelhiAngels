@@ -83,10 +83,10 @@ export default function Agenda() {
           <div className="w-full h-px bg-white/10 mb-8" />
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white uppercase tracking-tight leading-none">
-              May 24, 2026
+              Coming Soon
             </h2>
             <p className="text-[#a1a1aa] text-sm uppercase tracking-[0.15em] sm:text-right">
-              Noida · Full-Day Summit
+              Gurugram · Full-Day Summit
             </p>
           </div>
         </div>

@@ -60,8 +60,8 @@ export default function About() {
             </p>
             <p className="text-[#a1a1aa] text-base leading-relaxed">
               Whether you are building your first brand, scaling to ₹100Cr, or writing your
-              first cheque — this is the room you need to be in. Held in Noida on May 24,
-              2026, the summit is capped to keep conversations real.
+              first cheque — this is the room you need to be in. Coming to Gurugram,
+              the summit is capped to keep conversations real.
             </p>
           </div>
 
